@@ -13,6 +13,7 @@ function PipePair:init(y)
     }
     -- avoid buggy imagery by not deleting the pipes completelly 
     self.remove = false
+    self.scored = false
 end
 
 function PipePair:update(dt)

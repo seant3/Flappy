@@ -2,7 +2,7 @@ TitleScreenState = Class{__includes = BaseState}
 
 function TitleScreenState:update(dt)
     if love.keyboard.wasPressed('enter') or love.keyboard.wasPressed('return') then
-        gstateMachine:change('play')
+        gstateMachine:change('countdown')
     end
 end
 

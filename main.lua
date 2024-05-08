@@ -8,7 +8,9 @@ require 'PipePair'
 require 'StateMachine'
 require 'states/BaseState'
 require 'states/PlayState'
+require 'states/ScoreState'
 require 'states/TitleScreenState'
+require 'states/CountdownState'
 
 -- standard screen dimensions
 WINDOW_WIDTH = 1280
@@ -63,6 +65,8 @@ function love.load()
     gstateMachine = StateMachine {
         ['title'] = function() return TitleScreenState() end,
         ['play'] = function() return PlayState() end,
+        ['score'] = function() return ScoreState() end,
+        ['countdown'] = function() return CountdownState() end
     }
     gstateMachine:change('title')
     -- assign keysPressed to an empty table that we will manipulate
